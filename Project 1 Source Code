@@ -1,0 +1,36 @@
+/*
+    CIT 281 Project 1
+    Name: Sam Gfroerer
+*/
+
+let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; let date = new Date(); let dateindex = date.getDay(); console.log(weekdays[dateindex-1]);
+
+
+
+
+
+
+/*
+    CIT 281 Project 1
+    Name: Sam Gfroerer
+*/
+
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function getRandomLetter(){
+    let letters = "abcdefghijklmnopqrstuvwxyz";
+    return letters[Math.floor(Math.random() * letters.length)]
+}
+
+function random(){
+    let text = "";
+    for (let i = 5; i <= getRandomInteger(0,26); i++){
+    text += getRandomLetter()
+    }
+    return text;
+}
+
+console.log(random());
